@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>search Information</h1>
+    {% for b in form %}
+    <h4>{{b.title}}</h4>
+    <h4>{{b.eligible}}</h4>
+    <h4>{{b.number_id}}</h4>
+    {% endfor %}
+
+</body>
+
+</html>

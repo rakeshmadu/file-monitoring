@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Current Notification</h1>
+    <table border="2">
+        <tr>
+            <th>SL.No</th>
+            <th>Name of the Post</th>
+            <th>Eligible to Apply</th>
+            <th>Notification Number</th>
+
+        </tr>
+        {% for b in form %}
+        <tr>
+            <td>{{b.id}}</td>
+            <td>{{b.title}}</td>
+            <td>{{b.eligible}}</td>
+            <td>{{b.number_id}}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+    <br><br>
+</body>
+
+</html>

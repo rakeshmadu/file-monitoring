@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Update Fir Information</h1>
+    <form method='post'>
+        {% csrf_token %}
+        <input type='text' name='police_station_name' value="{{employee.police_station_name}} " />
+        <br>
+        <input type='text' name='police_station_code' value="{{employee.police_station_code}} " />
+        <br>
+        <input type='text' name='police_station_city' value="{{employee.police_station_city}}" />
+        <br>
+        <input type='text' name='complaint_name' value="{{employee.complaints_name}} " />
+        <br>
+        <input type='text' name='Father_name' value="{{employee.Father_name}} " />
+        <br>
+        <input type='text' name='complainants_address' value="{{employee.complainants_address}} " />
+        <br>
+        <input type='text' name='complainants_mobile_number' value="{{employee.complainants_mobile_number}} " />
+        <br>
+        <input type='text' name='place_of_loss' value="{{employee.place_of_loss}} " />
+        <br>
+        <input type='text' name='Date' value="{{employee.Date}}" />
+        <br>
+        <input type='text' name='time' value="{{employee.time}}" />
+        <br>
+        <input type='text' name='case_categeory' value="{{employee.case_categeory}}" />
+        <br>
+        <input type='text' name='lost_articles' value="{{employee.lost_articles}}" />
+        <br>
+        <input type='text' name='complete_description' value="{{employee.complet_description}} " />
+        <br>
+        <input type='text' name='fir_status' value="{{employee.fir_status}} " />
+        <br>
+
+
+        <input type='submit' value='submit'>
+
+    </form>
+</body>
+
+</html>

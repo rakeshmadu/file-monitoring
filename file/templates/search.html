@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>search Information</h1>
+    {% for b in form %}
+    <h4>{{b.fir_number}}</h4>
+    <h4>{{b.police_station_code}}</h4>
+    <h4>{{b.police_station_city}}</h4>
+    <h4>{{b.complaints_name}}</h4>
+    <h4>{{b.Father_name}}</h4>
+    <h4>{{b.complainants_address}}</h4>
+    <h4>{{b.complainants_mobile_number}}</h4>
+    <h4>{{b.place_of_loss}}</h4>
+    <h4>{{b.Date}}</h4>
+    <h4>{{b.time}}</h4>
+    <h4>{{b.case_categeory}}</h4>
+    <h4>{{b.lost_articles}}</h4>
+    <h4>{{b.complet_description}}</h4>
+    <h4>{{b.fir_status}}</h4>
+
+
+
+    {% endfor %}
+
+</body>
+
+</html>

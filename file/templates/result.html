@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <h1>Fir Details</h1>
+    <table border=2>
+        <tr>
+            <th>id</th>
+            <th>fir_number</th>
+            <th>police_station_name</th>
+            <th>police_station_code</th>
+            <th>police_station_city</th>
+            <th>complaint_name</th>
+            <th>Father_name</th>
+            <th>complainants_address</th>
+            <th>complainants_mobile_number</th>
+            <th>place_of_loss</th>
+            <th>date</th>
+            <th>time</th>
+            <th>case_categeory</th>
+            <th>lost_articles</th>
+            <th>complete_description</th>
+            <th>fir_status</th>
+            <th>Action</th>
+
+
+        </tr>
+        {% for emp in form %}
+        <tr>
+            <td>{{emp.id}}</td>
+            <td>{{emp.fir_number}}</td>
+            <td>{{emp.police_station_name}}</td>
+            <td>{{emp.police_station_code}}</td>
+            <td>{{emp.police_station_city}}</td>
+            <td>{{emp.complaints_name}}</td>
+            <td>{{emp.Father_name}}</td>
+            <td>{{emp.complainants_address}}</td>
+            <td>{{emp.complainants_mobile_number}}</td>
+            <td>{{emp.place_of_loss}}</td>
+            <td>{{emp.Date}}</td>
+            <td>{{emp.time}}</td>
+            <td>{{emp.case_categeory}}</td>
+            <td>{{emp.lost_articles}}</td>
+            <td>{{emp.complet_description}}</td>
+            <td>{{emp.fir_status}}</td>
+            <td><a href="/delete/{{emp.id}}">delete</a> &nbsp;<a href="/update/{{emp.id}}">Update</a></td>
+
+        </tr>
+        {% endfor %}
+    </table>
+    <br><br> Enter search:
+    <form method="POST" action="/search/">
+        {% csrf_token %}
+        <input type="text" name="q" placeholder="enter fir_number">
+        <input type="submit" value="search">
+    </form>
+    <br><br>
+    <a href="/fir">click here to register fir details</a>
+</body>
+
+</html>
